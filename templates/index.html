@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 22%;
+            padding: 10px;
+            font-size: 18px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Scientific Calculator</h2>
+    <form method="POST">
+        <input type="text" name="expression" value="{{ expression }}" placeholder="Enter expression" required>
+        <br><br>
+        <div class="row">
+            <button type="submit" class="btn">C</button>
+            <button type="submit" class="btn">√</button>
+            <button type="submit" class="btn">x²</button>
+            <button type="submit" class="btn">/</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn">7</button>
+            <button type="submit" class="btn">8</button>
+            <button type="submit" class="btn">9</button>
+            <button type="submit" class="btn">*</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn">4</button>
+            <button type="submit" class="btn">5</button>
+            <button type="submit" class="btn">6</button>
+            <button type="submit" class="btn">-</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn">1</button>
+            <button type="submit" class="btn">2</button>
+            <button type="submit" class="btn">3</button>
+            <button type="submit" class="btn">+</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn">0</button>
+            <button type="submit" class="btn">.</button>
+            <button type="submit" class="btn">(</button>
+            <button type="submit" class="btn">)</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn">sin</button>
+            <button type="submit" class="btn">cos</button>
+            <button type="submit" class="btn">tan</button>
+            <button type="submit" class="btn">log</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn">ln</button>
+            <button type="submit" class="btn">exp</button>
+            <button type="submit" class="btn">π</button>
+            <button type="submit" class="btn">e</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn">^</button>
+            <button type="submit" class="btn">=</button>
+        </div>
+    </form>
+
+    <h3>Result: {{ result }}</h3>
+</div>
+
+</body>
+</html>
